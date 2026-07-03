@@ -20,7 +20,7 @@ header{
     justify-content:space-between;
     align-items:center;
     box-shadow:0 2px 10px rgba(0,0,0,.15);
-    height: 120px;
+    color: #ffffff;
 }
 
 /* --- STYLISATION DU LOGO TRANSPARENT --- */
@@ -38,6 +38,7 @@ header{
     /* L'ASTUCE : Ce filtre inverse les couleurs du logo (le noir devient blanc) */
     /* Ainsi, ton logo transparent ressortira magnifiquement en blanc sur le fond rose ! */
     filter: invert(1) brightness(2); 
+    height:100px;
 }
 
 /* Masque le texte pour le SEO Google */
