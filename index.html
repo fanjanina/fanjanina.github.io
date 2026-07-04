@@ -9,7 +9,7 @@
     <link rel="stylesheet" href=nina.css>
 
     <body>
-        <header>
+        <!--<header>
             <h1>OTENTICPARIS</h1>
                 <a href="#" class="logo-container">
                 <img src="logo-otenticparis.png" alt="OTENTICPARIS Logo" class="logo-img">
@@ -20,13 +20,69 @@
                 <a href="#apropos">À propos</a>
                 <a href="#contact">Contact</a>
             </nav>
+        </header>-->
+
+        <header>
+            <!-- Groupe de navigation Gauche -->
+            <nav class="nav-left">
+                <a href="#" class="active">ACCUEIL</a>
+                <a href="#produits">COLLECTION</a>
+                <a href="#apropos">NOTRE UNIVERS</a>
+            </nav>
+
+            <!-- Logo centralisé -->
+            <div class="logo-centered">
+                <a href="#" class="logo-container">
+                    <!-- Si vous utilisez l'image du logo -->
+                    <img src="logo-otenticparis.png" alt="OTENTICPARIS Logo" class="logo-img"> 
+                    
+                    <!-- Structure textuelle fidèle à hero.jpg au cas où l'image ne contient pas le sous-texte -->
+                    <div class="logo-text-group">
+                        <span class="brand-name">ÔTENTIC</span>
+                        <span class="brand-sub">L'ART DE PARIS</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Groupe de navigation Droite + Icônes -->
+            <div class="nav-right-container">
+                <nav class="nav-right">
+                    <a href="#">ATELIER</a>
+                    <a href="#">JOURNAL</a>
+                    <a href="#contact">CONTACT</a>
+                </nav>
+                <div class="nav-icons">
+                    <!-- Icône Loupe (Recherche) -->
+                    <a href="#" class="icon-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </a>
+                    <!-- Icône Panier -->
+                    <a href="#" class="icon-link shopping-cart">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
         </header>
 
-        <section class="hero">
+
+        <!--<section class="hero">
             <div>
             <h2>Chaque création naît de nos mains pour traverser le temps</h2>
             <p>L'Art de Paris, façonné à la main.</p>
             <a href="#produits" class="btn">Découvrir nos produits</a>
+            </div>
+        </section>-->
+
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-subtitle">L'ART DE PARIS, FAÇONNÉ À LA MAIN</p>
+                
+                <!--<h2>Chaque création naît de nos mains pour traverser le temps</h2>-->
+                
+                <p class="hero-desc">L'âme de l'artisanat, l'élégance de Paris.</p>
+                
+                <a href="#produits" class="btn-hero">DÉCOUVRIR LA COLLECTION</a>
             </div>
         </section>
 
