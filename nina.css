@@ -22,7 +22,7 @@ body{
    HEADER
 ========================== */
 
-header{
+/*header{
     position:sticky;
     top:0;
     z-index:1000;
@@ -33,11 +33,28 @@ header{
     justify-content:space-between;
     align-items:center;
     box-shadow:0 3px 12px rgba(0,0,0,.08);
+}*/
+
+header {
+    position: absolute; /* Rendu transparent par-dessus l'image hero */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 5%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Sépare proprement Gauche / Milieu / Droite */
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 header h1{
     color:#1F1F1F;
-    letter-spacing:2px;
+    /*color: #ffffff !important;*/
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    letter-spacing:4px;
     font-size:30px;
 }
 
@@ -45,14 +62,14 @@ header h1{
    LOGO
 ========================== */
 
-.logo-container{
+/*.logo-container{
     display:flex;
     align-items:center;
     text-decoration:none;
 }
 
 .logo-img{
-    height:100px;
+    height:60px;
     width:auto;
     object-fit:contain;
 }
@@ -66,13 +83,59 @@ header h1{
     overflow:hidden;
     clip:rect(0,0,0,0);
     border:0;
+}*/
+
+.logo-centered {
+    display: flex;
+    justify-content: center;
 }
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #1F1F1F;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 4px;
+}
+
+/* Si vous utilisez le rendu textuel pur de la photo */
+.logo-text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.brand-name {
+    font-family: 'Times New Roman', Times, serif; /* Style Serif Haute Couture */
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    line-height: 1;
+}
+
+.brand-sub {
+    font-size: 9px;
+    letter-spacing: 4px;
+    margin-top: 5px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 2px 10px;
+}
+
 
 /* ==========================
    NAVIGATION
 ========================== */
 
-nav a{
+/*nav a{
     color:#1F1F1F;
     text-decoration:none;
     margin-left:25px;
@@ -82,23 +145,73 @@ nav a{
 
 nav a:hover{
     color:#C9A66B;
+}*/
+
+nav.nav-left {
+    display: flex;
+    justify-content: flex-start;
 }
+
+.nav-right-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav.nav-right {
+    display: flex;
+}
+
+nav a {
+    color: #1F1F1F;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin: 0 15px;
+    padding-bottom: 5px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Effet de soulignement élégant de hero.jpg */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #1F1F1F;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after, nav a.active::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #000;
+}
+
 
 /* ==========================
    HERO
 ========================== */
 
 .hero{
-    height:75vh;
+    height:100vh;
     display:flex;
-    justify-content:center;
+    justify-content:flex-start;
+    padding: 120px 10% 0% 10%;
     align-items:center;
     text-align:center;
     color:white;
 
     background:
-        linear-gradient(rgba(30,25,20,.45), rgba(30,25,20,.45)),
-        url("hero.jpeg");
+        linear-gradient(rgba(30,25,20,.45), rgba(30,25,20,.3)),
+        url("hero.png");
 
     background-size:cover;
     background-position:center;
@@ -113,7 +226,34 @@ nav a:hover{
 }
 
 .hero p{
-    font-size:22px;
+    /*font-size:22px;*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    max-width: 650px; /* Aligne et limite la largeur du bloc de texte à gauche */
+    text-align: left; /* Texte aligné à gauche */
+}
+
+.hero-subtitle {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #E5D2B2; /* Couleur dorée/crème douce */
+    margin-bottom: 15px;
+}
+
+.hero-desc {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+    color: #F8F3EC;
+    opacity: 0.9;
 }
 
 /* ==========================
@@ -126,6 +266,7 @@ nav a:hover{
     background:#C9A66B;
     color:white;
     padding:15px 35px;
+    padding-top: 120px;
     text-decoration:none;
     border-radius:40px;
     transition:.3s;
@@ -135,6 +276,28 @@ nav a:hover{
 .btn:hover{
     background:#9A7A4D;
     transform:translateY(-3px);
+}
+
+.btn-hero {
+    display: inline-block;
+    background: #C5A880; /* La couleur beige/marron de la photo */
+    color: #1F1F1F;      /* Texte foncé pour le contraste */
+    padding: 18px 40px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 4px; /* Forme rectangulaire comme sur l'image */
+    transition: all .3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-hero:hover {
+    background: #B3966E;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 /* ==========================
@@ -277,4 +440,36 @@ footer{
 #topButton:hover{
     background:#9A7A4D;
     transform:translateY(-5px);
+}
+
+/* ==========================
+   ICÔNES (Recherche & Panier)
+========================== */
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-link {
+    color: #1F1F1F;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.icon-link:hover {
+    transform: scale(1.08);
+}
+
+.shopping-cart {
+    position: relative;
+}
+
+.cart-count {
+    font-size: 10px;
+    margin-left: 4px;
+    font-weight: bold;
 }
