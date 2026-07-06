@@ -6,7 +6,8 @@
 
     <title>Otenticparis - Boutique en ligne</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href=nina.css>
+    <link rel="stylesheet" href="nina.css">
+    </head>
 
     <body>
 
@@ -21,10 +22,7 @@
             <!-- Logo centralisé -->
             <div class="logo-centered">
                 <a href="#" class="logo-container">
-                    <!-- Si vous utilisez l'image du logo -->
-                    <img src="logo-otenticparis.png" alt="OTENTICPARIS Logo" class="logo-img"> 
-                    
-                    <!-- Structure textuelle fidèle à hero.jpg au cas où l'image ne contient pas le sous-texte -->
+                    <img src="logo-otenticparis.png" alt="OTENTICPARIS Logo" class="logo-img">
                     <div class="logo-text-group">
                         <span class="brand-name">OTENTIC</span>
                         <span class="brand-sub">L'ART DE PARIS</span>
@@ -40,11 +38,9 @@
                     <a href="#contact">CONTACT</a>
                 </nav>
                 <div class="nav-icons">
-                    <!-- Icône Loupe (Recherche) -->
                     <a href="#" class="icon-link">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     </a>
-                    <!-- Icône Panier -->
                     <a href="#" class="icon-link shopping-cart">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                         <span class="cart-count">0</span>
@@ -56,45 +52,79 @@
         <section class="hero">
             <div class="hero-content">
                 <p class="hero-subtitle">ÔTentic,</p>
-                
-                <!--<h2>Chaque création naît de nos mains pour traverser le temps</h2>-->
-                
                 <p class="hero-desc" style="text-align:center;">L'Art de Paris est une maison de création en ligne dédiée à l'élégance, à l'originalité et à l'authenticité.</p>
-                
                 <a href="#produits" class="btn-hero">DÉCOUVRIR LA COLLECTION</a>
             </div>
         </section>
 
         <section id="produits">
             <h2 class="title">Nos produits</h2>
+
             <div class="products">
+
+                <!-- CARTE PASSY -->
                 <div class="card">
-                    <!--<img src="https://picsum.photos/400/300?random=1">-->
-                    <img src="passy/passy_1.jpeg">
-                <div class="card-body">
-                    <h3>PASSY</h3>
-                    <p style="text-align: justify;">Sac à main en raphia raffiné ,
-                        Grand, fourre tout et peut se porter à l'épaule.
-                        Il est élégant et marque bien votre look.</p>
-                    <div class="price">260,9€</div>
-                    <a href="#" class="buy">Commander</a>
-                </div>
+                    <div class="card-slider">
+                        <div class="card-slides">
+                            <!-- Slide 1 : Triple image -->
+                            <div class="card-slide triple-slide">
+                                <img src="WP/pictures/passy/passy_1.jpeg" alt="Passy 1">
+                                <img src="WP/pictures/passy/passy_2.jpeg" alt="Passy 2">
+                                <img src="WP/pictures/passy/passy_3.jpeg" alt="Passy 3">
+                            </div>
+                            <!-- Slide 2, 3, 4 : une photo à la fois -->
+                            <div class="card-slide">
+                                <img src="WP/pictures/passy/passy_1.jpeg" alt="Passy vue 1">
+                            </div>
+                            <div class="card-slide">
+                                <img src="WP/pictures/passy/passy_2.jpeg" alt="Passy vue 2">
+                            </div>
+                            <div class="card-slide">
+                                <img src="WP/pictures/passy/passy_3.jpeg" alt="Passy vue 3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h3>PASSY</h3>
+                        <p style="text-align: justify;">Sac à main en raphia raffiné, Grand, fourre tout et peut se porter à l'épaule. Il est élégant et marque bien votre look.</p>
+                        <div class="price">260,9€</div>
+                        <a href="#" class="buy">Commander</a>
+                    </div>
                 </div>
 
+                <!-- CARTE SEVRES-LECOURBE -->
                 <div class="card">
-                    <!--<img src="https://picsum.photos/400/300?random=2">-->
-                    <img src="Sèvres-Lecourbe/Sèvres-Lecourbe_1.jpeg">
+                    <div class="card-slider">
+                        <div class="card-slides">
+                            <div class="card-slide triple-slide">
+                                <img src="WP/pictures/sevres-lecourbe/sevres-lecourbe_1.jpeg" alt="Sèvres 1">
+                                <img src="WP/pictures/sevres-lecourbe/sevres-lecourbe_2.jpeg" alt="Sèvres 2">
+                                <img src="WP/pictures/sevres-lecourbe/sevres-lecourbe_3.jpeg" alt="Sèvres 3">
+                            </div>
+                            <div class="card-slide">
+                                <img src="WP/pictures/sevres-lecourbe/sevres-lecourbe_1.jpeg" alt="Sèvres vue 1">
+                            </div>
+                            <div class="card-slide">
+                                <img src="WP/pictures/sevres-lecourbe/sevres-lecourbe_2.jpeg" alt="Sèvres vue 2">
+                            </div>
+                            <div class="card-slide">
+                                <img src="WP/pictures/sevres-lecourbe/sevres-lecourbe_3.jpeg" alt="Sèvres vue 3">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="card-body">
                         <h3>SEVRES-LECOURBE</h3>
-                        <p style="text-align: justify;">Nous avons créer ce beau combo sac chapeau pour votre élégance singulier.
-                            Le duo de raphia et cuir se mari bien avec votre tenue,
-                            que ce soit décontracté ou correct.</p>
+                        <p style="text-align: justify;">Nous avons créer ce beau combo sac chapeau pour votre élégance singulier. Le duo de raphia et cuir se mari bien avec votre tenue, que ce soit décontracté ou correct.</p>
                         <div class="price">294 €</div>
                         <a href="#" class="buy">Commander</a>
                     </div>
                 </div>
+
+                <!-- CARTE ACCESSOIRES (Image fixe, pas de slider) -->
                 <div class="card">
-                    <img src="https://picsum.photos/400/300?random=3">
+                    <img src="https://picsum.photos/400/300?random=3" alt="Accessoires" style="width:100%; height:300px; object-fit:cover;">
                     <div class="card-body">
                         <h3>Accessoires</h3>
                         <p>La touche finale de votre style.</p>
@@ -102,12 +132,12 @@
                         <a href="#" class="buy">Commander</a>
                     </div>
                 </div>
+
             </div>
 
         </section>
 
         <section id="apropos">
-
             <h2 class="title">À propos</h2>
             <div class="about-columns">
                 <p>
@@ -120,7 +150,6 @@
                     ÔTentic, L'Art de Paris transforme vos inspirations en créations d'exception. Chez ÔTentic, L'Art de Paris, nous faisons de l'élégance, de la tendance, de l'originalité et du savoir-faire artisanal notre signature.
                 </p>
             </div>
-
         </section>
 
         <section id="contact">
@@ -128,7 +157,7 @@
             <div class="about">
             <p><strong>Facebook :</strong> otenticparis Boutique</p>
             <p><strong>WhatsApp :</strong> +336 88 12 85 62</p>
-            <p><strong>Email :</strong>contact@otenticparis.com</p>
+            <p><strong>Email :</strong> contact@otenticparis.com</p>
             </div>
         </section>
 
@@ -140,21 +169,38 @@
 
         <script>
             const topButton = document.getElementById("topButton");
-            const header = document.querySelector("header"); // On sélectionne le header
+            const header = document.querySelector("header");
 
             window.addEventListener("scroll", () => {
-                // Gestion du topButton
                 if (window.scrollY > 300) {
                     topButton.classList.add("show");
                 } else {
                     topButton.classList.remove("show");
                 }
 
-                // GESTION DU NAVBAR FIXE : Dès qu'on défile de plus de 20px, on applique le fond
                 if (window.scrollY > 20) {
                     header.classList.add("scrolled");
                 } else {
                     header.classList.remove("scrolled");
+                }
+            });
+
+            // GESTION DES MINI-SLIDERS DANS LES CARTES
+            const sliders = document.querySelectorAll('.card-slider');
+
+            sliders.forEach(slider => {
+                const slidesContainer = slider.querySelector('.card-slides');
+                const slidesCount = slider.querySelectorAll('.card-slide').length;
+                let currentIndex = 0;
+
+                if (slidesCount > 1) {
+                    setInterval(() => {
+                        currentIndex++;
+                        if (currentIndex >= slidesCount) {
+                            currentIndex = 0;
+                        }
+                        slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    }, 3500);
                 }
             });
          </script>
